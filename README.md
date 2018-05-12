@@ -1,6 +1,8 @@
 # HJU/CCA Code Style Guide
 
-Code and style guidelines for developing HJU/CCA related PHP/Laravel projects
+Code and style guidelines for developing HJU/CCA related PHP/Laravel projects.
+
+Must follow PSR1 and PSR2 coding standards.
 
 ## Table of contents
 
@@ -18,6 +20,6 @@ Code and style guidelines for developing HJU/CCA related PHP/Laravel projects
 	- [Spatie Laravel & PHP Guide](https://guidelines.spatie.be/code-style/laravel-php)
 	- [Laravel Best Practices](https://github.com/alexeymezenin/laravel-best-practices)
 
-- Write code
+- Writing code
 	- [Clean Code PHP](https://github.com/jupeter/clean-code-php)
 	- [Laracasts Simple Rules for Simpler Code](https://laracasts.com/series/simple-rules-for-simpler-code)

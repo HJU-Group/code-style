@@ -76,7 +76,7 @@ public function getExtendedAttributes($currentUser)
 private function cleanDataFromSystem()
 ```
 
-### Where it makes sense should be prefixed by a verb
+### Where it makes sense names should be prefixed by a verb
 
 * get
 * set
@@ -100,5 +100,52 @@ public function getExtendedAttributes($currentUser)
 private function deleteUser($user)
 ```
 
+### Should not contain un-needed or repetitive words
+
+#### Bad:
+
+```php
+Class UserExport 
+{
+	public function exportUser($user)
+	{
+	}
+}
+```
+
+#### Good
+
+```php
+Class UserExport
+{
+	public function export($user)
+	{
+	}
+}
+```
+
 ## <a name="classes"></a>Classes
 
+### Names should be clear and meaning full
+
+#### Bad:
+
+```php
+Class Export 
+{
+	public function exportUser($user)
+	{
+	}
+}
+```
+
+#### Good
+
+```php
+Class UserExportServices 
+{
+	public function export($user)
+	{
+	}
+}
+```
