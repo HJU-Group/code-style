@@ -2,6 +2,14 @@
 
 Code and style guidelines for developing HJU/CCA related PHP/Laravel projects
 
+## Table of contents
+
+- [Laravel](laravel.md)
+- [PHP](php.md) 
+	- [Variables](php.md#variables)
+	- [Functions](php.md#functions)
+	- [Classes](php.md#classes)
+	
 ## References
 
 - PHP & Laravel

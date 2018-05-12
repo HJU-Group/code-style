@@ -1,6 +1,6 @@
 # PHP
 
-## Variables / Class properties 
+## <a name="variables"></a>Variables / Class properties 
 
 ### Must be camelCase
 
@@ -56,7 +56,7 @@ private $currentUser;
 protected $site;
 ```
 
-## Functions / Class Methods
+## <a name="functions"></a>Functions / Class Methods
 
 ### Must be camelCase
 
@@ -100,5 +100,5 @@ public function getExtendedAttributes($currentUser)
 private function deleteUser($user)
 ```
 
-## Classes
+## <a name="classes"></a>Classes
 
