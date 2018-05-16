@@ -6,7 +6,16 @@ Must follow PSR1 and PSR2 coding standards.
 
 ## Table of contents
 
-
+- [PHP & Laravel Code Style Guide](php-laravel-code-style.md)
+	- [Arrays](php-laravel-code-style.md#arrays)
+	- [Classes](php-laravel-code-style.md#classes)
+	- [Docblocks](php-laravel-code-style.md#docblocks)
+	- [Functions / Class Methods](php-laravel-code-style.md#functions--class-methods)
+	- [If statements](php-laravel-code-style.md#if-statements)
+	- [Ternary operators](php-laravel-code-style.md#ternary-operators)
+	- [Variables / Class properties](php-laravel-code-style.md#variables--class-properties)
+	- [Whitespace](php-laravel-code-style.md#whitespace)
+- [Laravel Specific](laravel.md)
 	
 ## References
 

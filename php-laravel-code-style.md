@@ -7,6 +7,7 @@ Must follow [PSR 1](https://www.php-fig.org/psr/psr-1/) and [PSR 2](https://www.
 * Must be wrapped in braces
 * Starting brace must be on the same line
 * Not operator must be followed by a space
+* Should use === whenever possible
 
 ### Bad
 
@@ -30,6 +31,10 @@ if ($isAdmin) {
 
 if (! $isAdmin) {
     return response('Not authorized');
+}
+
+if ($user->id === 1) {
+    $this->setAdmin($user);
 }
 ```
 
@@ -162,6 +167,8 @@ private $currentUser;
 ## Functions / Class Methods
 
 * Must be camelCase
+* Opening brace must be on its own line
+* Scope must not be prefixed by underscore
 * Where it makes sense should be prefixed by a verb
     * Names can also be just a verb if it makes sense in the context of the class
     * get
@@ -178,7 +185,9 @@ private $currentUser;
 ```php
 public function ExtendedAttributes($currentUser)
 
-private function _clean_data_from_system()
+private function _clean_data_from_system() {
+    rmdir('./data');
+}
 
 //Another
 class UserRights
@@ -194,6 +203,9 @@ class UserRights
 public function getExtendedAttributes($currentUser)
 
 private function cleanDataFromSystem()
+{
+    rmdir('./data');
+}
 
 //Another
 class UserRights
@@ -204,6 +216,23 @@ class UserRights
 ```
 
 ## Classes
+
+* Must be clearly named
+* Open brace must be on its own line
+
+### Example
+
+```php
+class UserSetting 
+{
+    public function update($user)
+    {
+        ...
+    }
+}
+```
+
+### Good
 
 ## Arrays
 
