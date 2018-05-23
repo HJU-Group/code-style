@@ -53,14 +53,31 @@ $adminID = Auth::user()->isAdmin() ? Auth::user()->admin()->id : null;
 
 ```php
 $adminID = (Auth::user()->isAdmin()) 
-    ? Auth::user()->admin()->id 
-    : null;
+         ? Auth::user()->admin()->id 
+         : null;
 ```
 
 Unless it is short
 
 ```php
 $color = ($adminID) ? 'red' : 'blue';
+```
+
+## Chained Operations
+
+- Unless very short each operation should be on its own line
+- Should be aligned
+- ; should be after last operation
+
+### Example
+
+```php
+$user = User::whereActive(1)
+             ->whereConfirmed(1)
+             ->whereEmployee(1)
+             ->get();
+                    
+$foo = bar()->get();
 ```
 
 ## Comments
@@ -111,11 +128,16 @@ function getPageFooter($pageNumber)
 
 ## Docblocks
 
+- Do not align parameters
+- Parameter type comes before parameter
+- Use fully qualified class names
+- If exception is thrown, throws must be included
+
 ### Example
 
 ```php
 /**
-* @param $user
+* @param \App\Models\User $user
 * @return bool
 * @throws Exception
 */
@@ -175,6 +197,7 @@ private $currentUser;
     * set
     * update
     * delete
+    * process
     * fetch
       * Get remote data
     * is
@@ -232,11 +255,9 @@ class UserSetting
 }
 ```
 
-### Good
-
 ## Arrays
 
-* Each element must be on its own line
+* Each element must be on its own line, even short ones
 * Must use short syntax
 * Must have a comma after last element
 * Assignment operators must be aligned
@@ -246,12 +267,29 @@ class UserSetting
 ```php
 $colors = array('red', 'blue');
 
-//Another
 $colors = [
     'red' => 'FF000', 
     'blue' => '00FF00',
     'green' => '0000FF',
 ];
+
+$colors = ['red'];
+
+$colors = $this->getHex(
+    [
+        'red',
+        'green',        
+    ]    
+);
+
+$colors = $this->getHex(array_merge([
+        'red',
+        'green',        
+    ],[
+        'blue',
+        'yellow'        
+    ])
+);
 ```
 
 ### Good
@@ -262,10 +300,28 @@ $colors = [
     'blue',
 ];
 
-//Another
 $colors = [
     'red'   => 'FF000', 
     'blue'  => '00FF00',
     'green' => '0000FF',
 ];
+
+$colors = [
+    'red',
+];
+
+$colors = $this->getHex([
+        'red',
+        'green',        
+]);
+
+$colors = $this->getHex(array_merge([
+        'red',
+        'green',        
+    ], 
+    [
+        'blue',
+        'yellow'        
+    ]
+));
 ```
