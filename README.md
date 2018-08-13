@@ -16,7 +16,8 @@ Must follow PSR1 and PSR2 coding standards.
 	- [Variables / Class properties](php-laravel-code-style.md#variables--class-properties)
 	- [Whitespace](php-laravel-code-style.md#whitespace)
 - [Laravel Specific](laravel.md)
-	
+- [Testing](testing.md)
+
 ## References
 
 - PHP & Laravel
