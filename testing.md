@@ -11,9 +11,34 @@ Any repeated code in tests should be pulled into its own method whenever possibl
 If it is something that is shared across multiple tests such as a service class
 it should be created in the setUp method and assigned to a public variable.
 
+#### Structure
+
+Test should start with setup, follow by act (what you are testing),
+followed assertion(s).
+
+A test must contain at least 1 assertion.
+
+##### Example
+
+```php
+/** @test */
+function user_setting_service_can_update_phone_number()
+{   
+    $phone = '555-555-5555';
+    
+    $this->service->updatePhoneNumber([
+        'phone' => $phone,
+    ]);
+    
+    $this->assertDatabaseHas('user_settings', [
+        'phone' => $phone,
+    ]);
+}
+```
+
 #### Names
 
-Should be clear and concise, and use the test doc block
+Should be clear and concise, use the test doc block, and should include @covers
 
 ##### Bad:
 
@@ -28,9 +53,26 @@ function test_new_user()
 
 ```php
 /** @test */
-function user_can_register()
+function user_can_register_sucessfully()
 {
     ...
+}
+
+/** 
+ * @test
+ * @covers UserSettings::updateEmail
+ */
+function user_setting_service_can_update_email()
+{
+    $email = 'test@test.com';
+    
+    $this->service->updateEmail([
+        'email' => $email,
+    ]);
+    
+    $this->assertDatabaseHas('user_settings', [
+        'email' => $email,
+    ]);
 }
 ```
 
@@ -41,6 +83,9 @@ for possible negative effects or invalid input.
 
 For example, a user cannot register using a bad email address, or a
 method throws an exception when bad data is passed in.
+
+A good rule is if you have add an exception to your code, you should test
+that it can be triggered.
 
 ### Unit Tests
 
@@ -86,6 +131,7 @@ function setUp()
 function user_setting_service_can_update_phone_number()
 {   
     $phone = '555-555-5555';
+    
     $this->service->updatePhoneNumber([
         'phone' => $phone,
     ]);
@@ -99,6 +145,7 @@ function user_setting_service_can_update_phone_number()
 function user_setting_service_can_update_email()
 {
     $email = 'test@test.com';
+    
     $this->service->updateEmail([
         'email' => $email,
     ]);

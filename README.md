@@ -17,6 +17,15 @@ Must follow PSR1 and PSR2 coding standards.
 	- [Whitespace](php-laravel-code-style.md#whitespace)
 - [Laravel Specific](laravel.md)
 - [Testing](testing.md)
+    - [General](testing.md#general)
+        - [Code](testing.md#code)
+        - [Structure](testing.md#structure)
+        - [Names](testing.md#names)
+        - [Negative Tests](testing.md#negative-tests)
+    - [Unit Tests](testing.md#unit-tests)
+        - [Size](testing.md#size)
+    - [Functional Tests](testing.md#functional-tests)
+    - [Dusk Tests](testing.md#dusk-tests)
 
 ## References
 
