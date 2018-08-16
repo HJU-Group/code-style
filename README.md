@@ -26,6 +26,14 @@ Must follow PSR1 and PSR2 coding standards.
         - [Size](testing.md#size)
     - [Functional Tests](testing.md#functional-tests)
     - [Dusk Tests](testing.md#dusk-tests)
+- [Git & Github](git_and_github.md)
+    - [Branches](git_and_github.md#branches)
+        - [Size](git_and_github.md#size)
+        - [Names](git_and_github.md#names)
+    - [Github](git_and_github.md#github)
+        - [PRs](git_and_github.md#prs)
+            - [To Master](git_and_github.md#to-master)
+            - [To Your Branch](git_and_github.md#to-your-branch)
 
 ## References
 
