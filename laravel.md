@@ -2,6 +2,29 @@
 
 Laravel specific coding guidelines
 
+## Routes
+
+### Naming
+
+- Should follow the resource actions
+- Should be named
+    - Using . notation
+- Where practical use prefix grouping
+
+#### Example:
+
+```php
+Route::get('settings', 'UserSettings@index')->name('settings');
+Route::put('settings', 'UserSettings@update')->name('settings.update');
+
+Route::prefix('settings')->group(function () {
+    Route::get('email/work', 'UserEmailSettings@index')->name('settings.email.work');
+    Route::post('email/work', 'UserEmailSettings@index')->name('settings.email.work.create');
+    Route::put('email/work', 'UserEmailSettings@index')->name('settings.email.work.update');
+});
+```
+
+
 ## Controllers
 
 ### Must only be used for input and output
@@ -137,5 +160,76 @@ class UserSettingsServices
 ```
 
 ## Models
+
+### Location
+
+Must be in a Models directory and namespaced `namespace App\Models;`
+
+### Guarded
+
+Must only have elements guarded.
+
+Default:
+```php
+protected $guarded = ['id'];
+```
+
+### Casting
+
+Casting should be used for all elements
+
+#### Example
+
+```php
+protected $casts = [
+    'id'      => 'integer',
+    'user_id' => 'integer',
+];
+```
+
+### Scopes, Accessors & Mutators
+
+Can be included in the model class.  However, if there because a large
+number they should be moved to their own trait.
+
+If is usable across multiple models move to trait.
+
+### Full Example
+
+```php
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Crew extends Model
+{
+    /**
+     * The protected attributes
+     *
+     * @var array
+     */
+    protected $guarded = ['id'];
+
+    /**
+     * @var array
+     */
+    protected $casts = [
+        'id'      => 'integer',
+        'user_id' => 'integer',
+    ];
+
+    /**
+     * Users many to many relationship
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function user()
+    {
+        return $this->hasOne(User::class, 'id', 'user_id');
+    }
+}
+```
 
 ## Migrations
