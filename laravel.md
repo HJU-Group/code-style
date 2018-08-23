@@ -8,14 +8,15 @@ Laravel specific coding guidelines
 
 - Should follow the resource actions
 - Should be named
-    - Using . notation
+    - Show/index route should be single name
+    - Other routes should use . notation (route.method)
 - Where practical use prefix grouping
 
 #### Example:
 
 ```php
 Route::get('settings', 'UserSettings@index')->name('settings');
-Route::put('settings', 'UserSettings@update')->name('settings.update');
+Route::put('settings', 'UserSettings@update');
 
 Route::prefix('settings')->group(function () {
     Route::get('email/work', 'UserEmailSettings@index')->name('settings.email.work');
