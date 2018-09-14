@@ -18,7 +18,7 @@ Must follow PSR1 and PSR2 coding standards.
 - [Laravel Specific](laravel.md)
     - [Routes](laravel.md#routes)
     - [Controllers](laravel.md#controllers)
-    - [Service Classes](laravel.md#service-classes)
+    - [Action Classes](laravel.md#action-classes)
     - [Models](laravel.md#models)
     - [Migrations](laravel.md#migrations)
 - [Testing](testing.md)

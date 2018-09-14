@@ -113,13 +113,12 @@ class UserSettingsController extends Controller
 }
 ```
 
-## Service Classes
+## Action Classes
 
-Service classes provide reusable methods for domain logic that is not input/output.
-
-Methods and variables should be public to help with unit testing.
-
-There should be unit tests for all methods.
+- Action classes provide reusable method(s) for domain logic that is not input/output.
+- Method(s) and variable(s) should be public to help with unit testing.
+- There should be unit tests for all methods.
+- Must have an execute method
 
 ### Example
 
@@ -133,7 +132,7 @@ class UserSettingsController extends Controller
            'zip_code'       => 'required',
         ]);
        
-        app(UserSettingsServices::class)->update(Auth::user(), [
+        app(UpdateUserSettings::class)->execute(Auth::user(), [
            'phone_number' => $request->get('phone_number'),
            'zip_code'     => $request->get('zip_code'),
         ]);
@@ -142,12 +141,13 @@ class UserSettingsController extends Controller
     }
 }
 
-class UserSettingsServices
+class UpdateUserSettings
 {
     /**
      * @param User $user
+     * @param array $values
      */
-    public function update($user, $values)
+    public function execute($user, $values)
     {
         $values['phone_number'] = $this->formatPhoneNumber($values['phone_number']);
         $values['zip_code'] = $this->getExtendedZipCode($values['zip_code']);

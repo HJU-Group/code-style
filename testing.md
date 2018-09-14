@@ -4,6 +4,9 @@
 
 ### General
 
+A file should be created for each class being tested or where tests should
+logically be combined.
+
 #### Code
 
 Any repeated code in tests should be pulled into its own method whenever possible.
@@ -11,10 +14,52 @@ Any repeated code in tests should be pulled into its own method whenever possibl
 If it is something that is shared across multiple tests such as a service class
 it should be created in the setUp method and assigned to a public variable.
 
+##### Example
+
+```php
+class UpdateUserContactSettingsTest extends TestCase
+{
+    use DatabaseMigrations, SeedDatabaseAfterRefresh;
+
+    /**
+     * @var UpdateUserContactSettings
+     */
+    public $service;
+
+    public function setUp()
+    {
+        parent::setUp();
+
+        $this->service = app(UpdateUserContactSettings::class);
+    }
+
+    /**
+     * @test
+     * @covers \App\Actions\User\UpdateUserContactSettings::execute
+     */
+    public function valid_data()
+    {
+        $user = factory(User::class)->create();
+        $data = [
+            'email' => 'test@test.com',
+            'phone' => '5555555555',
+        ];
+
+        $this->service->execute($user, $data);
+        $user->refresh();
+
+        $this->assertEquals($data, [
+            'email' => $user->email,
+            'phone' => $user->phone,
+        ]);
+    }
+}
+```
+
 #### Structure
 
 Test should start with setup, follow by act (what you are testing),
-followed assertion(s).
+and then assertion(s).
 
 A test must contain at least 1 assertion.
 
@@ -84,7 +129,7 @@ for possible negative effects or invalid input.
 For example, a user cannot register using a bad email address, or a
 method throws an exception when bad data is passed in.
 
-A good rule is if you have add an exception to your code, you should test
+A good rule is if you have to add an exception to your code, you should test
 that it can be triggered.
 
 ### Unit Tests
