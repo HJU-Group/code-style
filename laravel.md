@@ -19,9 +19,12 @@ Route::get('settings', 'UserSettings@index')->name('settings');
 Route::put('settings', 'UserSettings@update');
 
 Route::prefix('settings')->group(function () {
-    Route::get('email/work', 'UserEmailSettings@index')->name('settings.email.work');
-    Route::post('email/work', 'UserEmailSettings@index')->name('settings.email.work.create');
-    Route::put('email/work', 'UserEmailSettings@index')->name('settings.email.work.update');
+    Route::get('email/work', 'UserEmailSettings@index')
+          ->name('settings.email.work');
+    Route::post('email/work', 'UserEmailSettings@index')
+          ->name('settings.email.work.create');
+    Route::put('email/work', 'UserEmailSettings@index')
+          ->name('settings.email.work.update');
 });
 ```
 
@@ -32,8 +35,8 @@ Route::prefix('settings')->group(function () {
 
 Should:
 * Take in the request
-* Validate
-* Pass to a service class for processing
+* Validate request or use [request validation class](laravel.md#form-validation-request-class)
+* Pass to a [action class](laravel.md#action-classes) for processing
 * Return response
 
 #### Bad
@@ -82,9 +85,17 @@ class UserSettingsController extends Controller
            'phone_number'   => 'required',
            'zip_code'       => 'required',
         ]);
-       
-        app(UserSettingsService)->validate($request->all());
-        app(UserSettingsService)->update($request->all());
+        
+        if (! app(isLocalPhoneNumber::class)->execute($request->get('phone_number'))) {
+            return response('failed', 500);
+        }
+        if (! app(isBannedPhoneNumber::class)->execute($request->get('phone_number')))  {
+            return response('failed', 500);
+        }
+        
+        if (! app(isValidZipCode::class)->execute($request->get('zip_code'))) {
+            return response('failed', 500);
+        }
         
         return response('complete');
     }
@@ -156,6 +167,49 @@ class UpdateUserSettings
             'phone_number' => $values['phone_number'],
              'zip_code'    => $values['zip_code'],
         ]);
+    }
+}
+```
+
+## Form Validation Request Class
+
+- Should be used where practical
+- Named to match the controller request
+
+### Example
+
+```php
+class StoreDepartmentsRequest extends FormRequest
+{
+    /**
+     * Get the validation rules that apply to the request.
+     *
+     * @return array
+     */
+    public function rules()
+    {
+        return [
+            'name'        => [
+                'required',
+                'string',
+                'max:255',
+                Rule::unique('departments')->ignore($this->getDepartmentId()),
+            ],
+            'description' => [
+                'nullable', 
+                'string'
+            ],
+        ];
+    }
+
+    /**
+     * @return int|null
+     */
+    protected function getDepartmentId()
+    {
+        return ($this->department === null)
+            ? null
+            : $this->department->id;
     }
 }
 ```

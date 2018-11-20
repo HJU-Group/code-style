@@ -188,20 +188,21 @@ private $currentUser;
 
 ## Functions / Class Methods
 
-* Must be camelCase
-* Opening brace must be on its own line
-* Scope must not be prefixed by underscore
-* Where it makes sense should be prefixed by a verb
-    * Names can also be just a verb if it makes sense in the context of the class
-    * get
-    * set
-    * update
-    * delete
-    * process
-    * fetch
-      * Get remote data
-    * is
-      * Returns boolean
+- Must be camelCase
+- Opening brace must be on its own line
+- Scope must not be prefixed by underscore
+- Where it makes sense should be prefixed by a verb
+    - Names can also be just a verb if it makes sense in the context of the class
+    - Examples
+      - get
+      - set
+      - update
+      - delete
+      - process
+      - fetch
+        - Get remote data
+      - is
+        - Returns boolean
 
 ### Bad:
 
