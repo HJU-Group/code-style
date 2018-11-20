@@ -11,7 +11,7 @@ logically be combined.
 
 Any repeated code in tests should be pulled into its own method whenever possible.
 
-If it is something that is shared across multiple tests such as a service class
+If it is something that is shared across multiple tests such as an action or service class
 it should be created in the setUp method and assigned to a public variable.
 
 ##### Example
@@ -172,7 +172,10 @@ function setUp()
     $this->service = app(UserSettingsService);
 }
 
-/** @test */
+/** 
+ * @test
+ * @covers \App\Services\UserSettingsService::updatePhoneNumber
+ */
 function user_setting_service_can_update_phone_number()
 {   
     $phone = '555-555-5555';
@@ -186,7 +189,10 @@ function user_setting_service_can_update_phone_number()
     ]);
 }
 
-/** @test */
+/** 
+ * @test 
+ * @covers \App\Services\UserSettingsService::updateEmail
+ */
 function user_setting_service_can_update_email()
 {
     $email = 'test@test.com';

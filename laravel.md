@@ -288,3 +288,59 @@ class Crew extends Model
 ```
 
 ## Migrations
+
+- A unique id column should always be used
+- Timestamps should be used where practical
+- Down method is optional
+    - If used dropIfExists should be used vs drop
+- Index and foreign keys should be done after the creation of the column
+    - Required for any column where needed
+    - onDelete and onUpdate should be used on foreign keys
+
+### Example
+
+```php
+class CreateEndorsementsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('endorsements', function (Blueprint $table) {
+            $table->increments('id');
+            $table->unsignedInteger('crew_position_id');
+            $table->unsignedInteger('endorsement_request_id');
+            $table->datetime('approved_at')
+                  ->nullable();
+            $table->timestamps();
+
+            $table->foreign('endorsement_request_id')
+                  ->references('id')
+                  ->on('endorsement_requests')
+                  ->onDelete('cascade')
+                  ->onUpdate('cascade');
+
+            $table->foreign('crew_position_id')
+                  ->references('id')
+                  ->on('crew_positions')
+                  ->onDelete('cascade')
+                  ->onUpdate('cascade');
+
+            $table->index('approved_at');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('endorsements');
+    }
+}
+```
