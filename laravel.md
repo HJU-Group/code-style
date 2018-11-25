@@ -348,3 +348,9 @@ class CreateEndorsementsTable extends Migration
     }
 }
 ```
+
+## View Models
+
+See [this blog post](https://stitcher.io/blog/laravel-view-models) for more information
+
+Should be used if more than 2 data items are being passed to the view or there is complex logic.
