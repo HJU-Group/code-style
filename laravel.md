@@ -126,6 +126,8 @@ class UserSettingsController extends Controller
 
 ## Action Classes
 
+See [Medium](https://medium.com/@remi_collin/keeping-your-laravel-applications-dry-with-single-action-classes-6a950ec54d1d) Post for more information
+
 - Action classes provide reusable method(s) for domain logic that is not input/output.
 - Method(s) and variable(s) should be public to help with unit testing.
 - There should be unit tests for all methods.
@@ -172,6 +174,8 @@ class UpdateUserSettings
 ```
 
 ## Form Validation Request Class
+
+See [Laravel Docs](https://laravel.com/docs/5.7/validation#form-request-validation) for more infromation
 
 - Should be used where practical
 - Named to match the controller request
