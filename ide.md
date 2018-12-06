@@ -10,7 +10,8 @@
    * Wrapping and Braces
       * Array Initializer: Do not wrap
          * Align Key Value Pairs
-   * Use fully-qualified class names
+   * PHPDoc
+      * Use fully-qualified class names
 * Code Style (Javascript)
    * Indent 4 (All)
 #### File and Code Templates
