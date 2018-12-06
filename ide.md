@@ -67,8 +67,8 @@
   * If the cursor is in a test method run that method or all the tests in the file if its outside a method
   * My map is ALT + A
 * Run
- * Will run the last test run regardless of cursor location
- * My map is ALT + Z
+  * Will run the last test run regardless of cursor location
+  * My map is ALT + Z
 
 #### File and Code Templates
 
@@ -136,4 +136,3 @@ public function $NAME$($PARAMETERS$)
 
 * https://murze.be/configuring-phpstorms-code-generation
 * https://stitcher.io/blog/phpstorm-performance
-* 
