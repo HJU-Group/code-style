@@ -6,7 +6,7 @@
    * Ensure line feed at file end on Save
 * Code Style (PHP)
    * Set Predefined Style to PSR1/PSR2
-      * IMAGE
+      * ![Predefined Style](https://github.com/cca-bheath/code-style/blob/master/img/predefined-style.png)
    * Wrapping and Braces
       * Array Initializer: Do not wrap
          * Align Key Value Pairs
@@ -20,14 +20,14 @@
 #### PHPUnit
 * Set CLI Interpreter
    * Languages & Frameworks > PHP
-   * IMAGE
+   * ![CLI Interpreter](https://github.com/cca-bheath/code-style/blob/master/img/cli-interpreter.png)
 * Double check PHPUnit Settings
    * Languages & Frameworks > PHP > Test Frameworks > PHPUnit
 ### Running Tests
 * Test Folder
-    * IMAGE
+    * ![Test Folder](https://github.com/cca-bheath/code-style/blob/master/img/test-folder.png)
 * Test Class
-    * IMAGE
+    * ![Test Class](https://github.com/cca-bheath/code-style/blob/master/img/test-class.png)
 * Test Method
-    * IMAGE
+    * ![Test Method](https://github.com/cca-bheath/code-style/blob/master/img/test-method.png)
 
