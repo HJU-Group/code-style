@@ -41,6 +41,7 @@ Must follow PSR1 and PSR2 coding standards.
         - [PRs](git_and_github.md#prs)
             - [To Master](git_and_github.md#to-master)
             - [To Your Branch](git_and_github.md#to-your-branch)
+- IDE (git_and_github.md#github)
 
 ## References
 
