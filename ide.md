@@ -73,7 +73,7 @@
 * Find in all files
   * Shift + Shift (Default)
 * Optimize (PHP)
-  * Ctrl + Alt + O
+  * Ctrl + Alt + O (Default)
   * Removes all non-used classes
 * Format
   * Ctrl + Alt + L (Default)
