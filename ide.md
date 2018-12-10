@@ -14,7 +14,8 @@
       * Tabs and Indents
         * Leave default
       * Spaces
-        * Leave default
+        * Other
+           * After Unary Not (!)
       * Wrapping and Braces
         * Array Initializer: Do not wrap
            * Align Key Value Pairs
