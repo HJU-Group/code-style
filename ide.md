@@ -144,7 +144,7 @@ public function $NAME$($PARAMETERS$)
 ### MISC
 * Scroll From Source
    * Displays the location of the file in the directory tree
-   * IMAGE
+   * ![Scroll from Source](https://github.com/cca-bheath/code-style/blob/master/img/scroll-from-source.png)
 
 ### References
 
