@@ -69,6 +69,15 @@
 * Run
   * Will run the last test run regardless of cursor location
   * My map is ALT + Z
+* Find in all files
+  * Shift + Shift (Default)
+* Optimize (PHP)
+  * Ctrl + Alt + O
+  * Removes all non-used classes
+* Format
+  * Ctrl + Alt + L
+  * Applies the code style config to the code
+  * Also works on selected
 
 #### File and Code Templates
 
@@ -131,6 +140,10 @@ public function $NAME$($PARAMETERS$)
 }
 
 ```
+
+### MISC
+* Scroll From Source
+   * IMAGE
 
 ### References
 
