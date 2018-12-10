@@ -143,6 +143,7 @@ public function $NAME$($PARAMETERS$)
 
 ### MISC
 * Scroll From Source
+   * Displays the location of the file in the directory tree
    * IMAGE
 
 ### References
