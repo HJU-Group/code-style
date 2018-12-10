@@ -75,10 +75,14 @@
   * Ctrl + Alt + O
   * Removes all non-used classes
 * Format
-  * Ctrl + Alt + L
+  * Ctrl + Alt + L (Default)
   * Applies the code style config to the code
   * Also works on selected
-
+* Bookmarks
+  * Add/Remove bookmark
+     * Ctrl + Shift 1-9 (Default) 
+  * Go to bookmark
+     * Ctrl + 1-9
 #### File and Code Templates
 
 ##### Blade
