@@ -83,7 +83,10 @@ function user_setting_service_can_update_phone_number()
 
 #### Names
 
-Should be clear and concise, use the test doc block, and should include @covers
+- Should be clear and concise
+- Must use the test doc block
+- Must include @covers
+  - Must have the entire name space
 
 ##### Bad:
 
@@ -105,7 +108,7 @@ function user_can_register_sucessfully()
 
 /** 
  * @test
- * @covers UserSettings::updateEmail
+ * @covers \App\Services\UserSettings::updateEmail
  */
 function user_setting_service_can_update_email()
 {
@@ -118,6 +121,19 @@ function user_setting_service_can_update_email()
     $this->assertDatabaseHas('user_settings', [
         'email' => $email,
     ]);
+}
+
+/** 
+ * @test
+ * @covers \App\Services\UserSettings::updateEmail
+ */
+function user_setting_service_cannot_update_without_email()
+{
+    $email = '';
+    
+    $this->assertFalse($this->service->updateEmail([
+        'email' => $email,
+    ]));
 }
 ```
 

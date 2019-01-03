@@ -10,24 +10,28 @@ Laravel specific coding guidelines
 - Should be named
     - Show/index route should be single name
     - Other routes should use . notation (route.method)
+    - If using `::resource` must use the `as` notation for name
+    - If not a `::resource`, must use the array to the controller and method
+      - Must use full namespace class
 - Where practical use prefix grouping
 
 #### Example:
 
 ```php
-Route::get('settings', 'UserSettings@index')->name('settings');
-Route::put('settings', 'UserSettings@update');
+Route::resource('faq', 'CrewController', ['as' => 'crew']);
+
+Route::get('settings', [\App\Controllers\UserSettings::class, 'index'])->name('settings');
+Route::put('settings', [\App\Controllers\UserSettings::class, 'update']);
 
 Route::prefix('settings')->group(function () {
-    Route::get('email/work', 'UserEmailSettings@index')
+    Route::get('email/work', [\App\Controllers\UserEmailSettings::class, 'index'])
           ->name('settings.email.work');
-    Route::post('email/work', 'UserEmailSettings@index')
+    Route::post('email/work', [\App\Controllers\UserEmailSettings::class, 'store'])
           ->name('settings.email.work.create');
-    Route::put('email/work', 'UserEmailSettings@index')
+    Route::put('email/work', [\App\Controllers\UserEmailSettings::class, 'update'])
           ->name('settings.email.work.update');
 });
 ```
-
 
 ## Controllers
 
