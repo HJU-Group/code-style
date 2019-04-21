@@ -1,10 +1,8 @@
-# IDE
+# PHPSTORM
 
-## PHPSTORM
+## Config
 
-### Config
-
-#### Editor
+### Editor
 * General
    * Ensure line feed at file end on Save
 * Code Style (PHP)
@@ -34,10 +32,10 @@
 * Code Style (Javascript)
    * Indent 4 (All)
 
-#### File and Code Templates
+### File and Code Templates
 * Remove contents in `Includes > PHP File Header`
 
-#### Plugins
+### Plugins
 * Required
   * Laravel Plugin
 * Optional
@@ -45,7 +43,7 @@
     * https://plugins.jetbrains.com/plugin/9795-laravelstorm
   * .env file support
 
-#### PHPUnit
+### PHPUnit
 * Set CLI Interpreter
    * Languages & Frameworks > PHP
    * ![CLI Interpreter](https://github.com/cca-bheath/code-style/blob/master/img/cli-interpreter.png)
@@ -53,7 +51,7 @@
    * Languages & Frameworks > PHP > Test Frameworks > PHPUnit
 
 
-### Running Tests
+## Running Tests
 * Test Folder
     * ![Test Folder](https://github.com/cca-bheath/code-style/blob/master/img/test-folder.png)
 * Test Class
@@ -61,9 +59,9 @@
 * Test Method
     * ![Test Method](https://github.com/cca-bheath/code-style/blob/master/img/test-method.png)
 
-### Optional Setup
+## Optional Setup
 
-#### Keyboard Shortcuts
+### Keyboard Shortcuts
 * Run Context Configuration
   * If the cursor is in a test method run that method or all the tests in the file if its outside a method
   * My map is ALT + A
@@ -84,12 +82,12 @@
      * Ctrl + Shift 1-9 (Default) 
   * Go to bookmark
      * Ctrl + 1-9
-#### File and Code Templates
+### File and Code Templates
 
-##### Blade
+#### Blade
 Make an empty file with extension .blade.php
 
-##### Laravel Test
+#### Laravel Test
 
 ```php
 <?php
@@ -129,9 +127,9 @@ class ${NAME} extends TestCase
 }
 ```
 
-#### Live Templates
+### Live Templates
 
-#### pubft
+### pubft
 Create a public function test method
 
 ```php
@@ -146,12 +144,12 @@ public function $NAME$($PARAMETERS$)
 
 ```
 
-### MISC
+## MISC
 * Scroll From Source
    * Displays the location of the file in the directory tree
    * ![Scroll from Source](https://github.com/cca-bheath/code-style/blob/master/img/scroll-from-source.png)
 
-### References
+## References
 
 * https://murze.be/configuring-phpstorms-code-generation
 * https://stitcher.io/blog/phpstorm-performance
