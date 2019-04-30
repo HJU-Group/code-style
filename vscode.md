@@ -2,53 +2,86 @@
 
 ## `Ctrl + ,` Settings 
 * General
-    * Widen working area width by removing the code minimap 
-    **IMAGE HERE**
+    
+    Widen working area width by removing the code minimap 
+        
+    ![General](https://github.com/cca-bheath/code-style/blob/master/img/VSC-code-remove-minimap.png)
 
 ## Basics
-*  `Ctrl +` ` [Integrated Terminal](https://code.visualstudio.com/docs/editor/integrated-terminal)
-**IMAGE HERE**
+*  [Integrated Terminal](https://code.visualstudio.com/docs/editor/integrated-terminal) 
+    
+    Keyboard Shortcut: Ctrl +`
 
-*  `Ctrl + B` Toggle Sidebar
-**IMAGE HERE**
+    ![Integrated Terminal](https://github.com/cca-bheath/code-style/blob/master/img/VSC-integrated_terminal.png)
 
-*  `Ctrl + K Z` Zen Mode
-Enter distraction free Zen mode. Press `Esc` twice to exit.
-**IMAGE HERE**
+*  Toggle Sidebar
+    
+    Keyboard Shortcut: `Ctrl + B` 
 
-*  `Ctrl + Shift + P` Command Palette
+    ![Toggle Sidebar](https://github.com/cca-bheath/code-style/blob/master/img/VSC-toggle_side_bar.gif)
+
+*  Zen Mode
+
+    Enter distraction free Zen mode. Press `Esc` twice to exit.
+    
+    Keyboard Shortcut: `Ctrl + K Z`
+
+    ![Zen Mode](https://github.com/cca-bheath/code-style/blob/master/img/VSC-zen_mode)
+
+*  Command Palette
+    
     Access all available commands based on your current context.
-**IMAGE HERE**
 
-*  `Ctrl + P` Quick Open 
+    Keyboard Shortcut: `Ctrl + Shift + P` 
+        
+    ![Command Palette](https://github.com/cca-bheath/code-style/blob/master/img/VSC-OpenCommandPalatte)
+
+*  Quick Open 
+
     Quickly open files.
-    **IMAGE HERE**
+    
+    Keyboard Shortcut: `Ctrl + P` 
+    
+    ![Quick Open ](https://github.com/cca-bheath/code-style/blob/master/img/VSC-QuickOpen.gif)
 
-*  `Ctrl + Shift + M` Errors and Warnings status bar
+*  Errors and Warnings status bar
+
     Quickly jump to errors and warnings in the project.
-    **IMAGE HERE**
+    
+    Keyboard Shortcut: `Ctrl + Shift + M` 
+    
+    ![Errors and Warnings](https://github.com/cca-bheath/code-style/blob/master/img/VSC-Errors_Warnings.gif)
 
 ## Edting Hacks
 * Multi cursor selection
+    
     To add cursors at arbitrary positions, select a position with your mouse and use Alt+Click (Option+click on macOS).
+    
     To set cursors above or below the current position use:
+    
     Keyboard Shortcut: `Shift + Alt + Up` or `Shift + Alt + Down`
 
-    **IMAGE HERE**
+    ![multicursor](https://github.com/cca-bheath/code-style/blob/master/img/VSC-multicursor.gif)
     
     You can add additional cursors to all occurrences of the current selection with `Ctrl + Shift + L`.
 
-    **IMAGE HERE**
+    ![multicursor current](https://github.com/cca-bheath/code-style/blob/master/img/VSC-add_cursor_current_selection.gif)
 
     > Note: You can also change the modifier to `Ctrl/Cmd` for applying multiple cursors with the `editor.multiCursorModifier` setting . See Multi-cursor Modifier for details.
 
     If you do not want to add all occurrences of the current selection, you can use `Ctrl+D` instead. This only selects the next occurrence after the one you selected so you can add selections one by one.
-    **IMAGE HERE**
+    
+    ![multicursor individual](https://github.com/cca-bheath/code-style/blob/master/img/VSC-add_cursor_current_selection_one_by_one.gif)
+
 * Copy line up / down
+
     Keyboard Shortcut: `Ctrl+Shift+Alt+Up` or `Ctrl+Shift+Alt+Down`
+    
     >The commands **Copy Line Up/Down** are unbound on Linux because the VS Code default keybindings would conflict with Ubuntu keybindings, see Issue #509. You can still set the commands `editor.action.copyLinesUpAction` and `editor.action.copyLinesDownAction` to your own preferred keyboard shortcuts.
+
 * Move line up and down
-Keyboard Shortcut: `Alt+Up` or `Alt+Down`
+
+    Keyboard Shortcut: `Alt+Up` or `Alt+Down`
 
 ## Keyboard Shortcuts Reference`
 They have a printable version of these keyboard shortcuts. Help > Keyboard Shortcut Reference displays a condensed PDF version suitable for printing as an easy reference.
