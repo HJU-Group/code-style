@@ -5,20 +5,20 @@
     
     Widen working area width by removing the code minimap 
         
-    ![General](https://github.com/cca-bheath/code-style/blob/master/img/VSC-code-remove-minimap.png)
+    ![General](https://github.com/cca-bheath/code-style/blob/add_vscode/img/VSC-code-remove-minimap.png)
 
 ## Basics
 *  [Integrated Terminal](https://code.visualstudio.com/docs/editor/integrated-terminal) 
     
     Keyboard Shortcut: Ctrl +`
 
-    ![Integrated Terminal](https://github.com/cca-bheath/code-style/blob/master/img/VSC-integrated_terminal.png)
+    ![Integrated Terminal](https://github.com/cca-bheath/code-style/blob/add_vscode/img/VSC-integrated_terminal.png)
 
 *  Toggle Sidebar
     
     Keyboard Shortcut: `Ctrl + B` 
 
-    ![Toggle Sidebar](https://github.com/cca-bheath/code-style/blob/master/img/VSC-toggle_side_bar.gif)
+    ![Toggle Sidebar](https://github.com/cca-bheath/code-style/blob/add_vscode/img/VSC-toggle_side_bar.gif)
 
 *  Zen Mode
 
@@ -26,7 +26,7 @@
     
     Keyboard Shortcut: `Ctrl + K Z`
 
-    ![Zen Mode](https://github.com/cca-bheath/code-style/blob/master/img/VSC-zen_mode)
+    ![Zen Mode](https://github.com/cca-bheath/code-style/blob/add_vscode/img/VSC-zen_mode)
 
 *  Command Palette
     
@@ -34,7 +34,7 @@
 
     Keyboard Shortcut: `Ctrl + Shift + P` 
         
-    ![Command Palette](https://github.com/cca-bheath/code-style/blob/master/img/VSC-OpenCommandPalatte)
+    ![Command Palette](https://github.com/cca-bheath/code-style/blob/add_vscode/img/VSC-OpenCommandPalatte)
 
 *  Quick Open 
 
@@ -42,7 +42,7 @@
     
     Keyboard Shortcut: `Ctrl + P` 
     
-    ![Quick Open ](https://github.com/cca-bheath/code-style/blob/master/img/VSC-QuickOpen.gif)
+    ![Quick Open ](https://github.com/cca-bheath/code-style/blob/add_vscode/img/VSC-QuickOpen.gif)
 
 *  Errors and Warnings status bar
 
@@ -50,7 +50,7 @@
     
     Keyboard Shortcut: `Ctrl + Shift + M` 
     
-    ![Errors and Warnings](https://github.com/cca-bheath/code-style/blob/master/img/VSC-Errors_Warnings.gif)
+    ![Errors and Warnings](https://github.com/cca-bheath/code-style/blob/add_vscode/img/VSC-Errors_Warnings.gif)
 
 ## Edting Hacks
 * Multi cursor selection
@@ -61,17 +61,17 @@
     
     Keyboard Shortcut: `Shift + Alt + Up` or `Shift + Alt + Down`
 
-    ![multicursor](https://github.com/cca-bheath/code-style/blob/master/img/VSC-multicursor.gif)
+    ![multicursor](https://github.com/cca-bheath/code-style/blob/add_vscode/img/VSC-multicursor.gif)
     
     You can add additional cursors to all occurrences of the current selection with `Ctrl + Shift + L`.
 
-    ![multicursor current](https://github.com/cca-bheath/code-style/blob/master/img/VSC-add_cursor_current_selection.gif)
+    ![multicursor current](https://github.com/cca-bheath/code-style/blob/add_vscode/img/VSC-add_cursor_current_selection.gif)
 
     > Note: You can also change the modifier to `Ctrl/Cmd` for applying multiple cursors with the `editor.multiCursorModifier` setting . See Multi-cursor Modifier for details.
 
     If you do not want to add all occurrences of the current selection, you can use `Ctrl+D` instead. This only selects the next occurrence after the one you selected so you can add selections one by one.
     
-    ![multicursor individual](https://github.com/cca-bheath/code-style/blob/master/img/VSC-add_cursor_current_selection_one_by_one.gif)
+    ![multicursor individual](https://github.com/cca-bheath/code-style/blob/add_vscode/img/VSC-add_cursor_current_selection_one_by_one.gif)
 
 * Copy line up / down
 
