@@ -26,7 +26,7 @@
     
     Keyboard Shortcut: `Ctrl + K Z`
 
-    ![Zen Mode](https://github.com/cca-bheath/code-style/blob/add_vscode/img/VSC-zen_mode)
+    ![Zen Mode](https://github.com/cca-bheath/code-style/blob/add_vscode/img/VSC-zen_mode.gif)
 
 *  Command Palette
     
@@ -34,7 +34,7 @@
 
     Keyboard Shortcut: `Ctrl + Shift + P` 
         
-    ![Command Palette](https://github.com/cca-bheath/code-style/blob/add_vscode/img/VSC-OpenCommandPalatte)
+    ![Command Palette](https://github.com/cca-bheath/code-style/blob/add_vscode/img/VSC-OpenCommandPalatte.gif)
 
 *  Quick Open 
 
@@ -69,21 +69,21 @@
 
     > Note: You can also change the modifier to `Ctrl/Cmd` for applying multiple cursors with the `editor.multiCursorModifier` setting . See Multi-cursor Modifier for details.
 
-    If you do not want to add all occurrences of the current selection, you can use `Ctrl+D` instead. This only selects the next occurrence after the one you selected so you can add selections one by one.
+    If you do not want to add all occurrences of the current selection, you can use `Ctrl + D` instead. This only selects the next occurrence after the one you selected so you can add selections one by one.
     
     ![multicursor individual](https://github.com/cca-bheath/code-style/blob/add_vscode/img/VSC-add_cursor_current_selection_one_by_one.gif)
 
 * Copy line up / down
 
-    Keyboard Shortcut: `Ctrl+Shift+Alt+Up` or `Ctrl+Shift+Alt+Down`
+    Keyboard Shortcut: `Ctrl + Shift + Alt + Up` or `Ctrl + Shift + Alt+ Down`
     
     >The commands **Copy Line Up/Down** are unbound on Linux because the VS Code default keybindings would conflict with Ubuntu keybindings, see Issue #509. You can still set the commands `editor.action.copyLinesUpAction` and `editor.action.copyLinesDownAction` to your own preferred keyboard shortcuts.
 
 * Move line up and down
 
-    Keyboard Shortcut: `Alt+Up` or `Alt+Down`
+    Keyboard Shortcut: `Alt + Up` or `Alt + Down`
 
-## Keyboard Shortcuts Reference`
+## Keyboard Shortcuts Reference
 They have a printable version of these keyboard shortcuts. Help > Keyboard Shortcut Reference displays a condensed PDF version suitable for printing as an easy reference.
 
 Below are links to the three platform-specific versions:
