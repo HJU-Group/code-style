@@ -90,3 +90,18 @@ Below are links to the three platform-specific versions:
 * **[Windows](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)**
 * **[macOS](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf)**
 * **[Linux](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-linux.pdf)**
+
+## Plugins
+* Recommended
+    * [Laravel Blade Snippets](https://marketplace.visualstudio.com/items?itemName=onecentlin.laravel-blade)
+    * [Laravel Extra Intellisense](https://marketplace.visualstudio.com/items?itemName=amiralizadeh9480.laravel-extra-intellisense)
+    * [PHP Intelephense](https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client)
+    * [Prettier - Code Formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+    * [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur)
+* Optional
+    * [Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag)
+    * [Git History](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory)
+    * [Path Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense)
+
+## Jack Sparrow's Guide
+https://laracasts.com/series/visual-studio-code-for-php-developers
