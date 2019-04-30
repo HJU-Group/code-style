@@ -1,11 +1,11 @@
 # Visual Studio Code
 
-## `Ctrl + ,` Settings 
+## Settings 
 * General
     
     Widen working area width by removing the code minimap 
         
-    ![General](https://github.com/cca-bheath/code-style/blob/add_vscode/img/VSC-code-remove-minimap.png)
+    ![remove minimap](https://github.com/cca-bheath/code-style/blob/add_vscode/img/VSC-code-remove-minimap.png)
 
 ## Basics
 *  [Integrated Terminal](https://code.visualstudio.com/docs/editor/integrated-terminal) 
