@@ -149,6 +149,13 @@ public function $NAME$($PARAMETERS$)
    * Displays the location of the file in the directory tree
    * ![Scroll from Source](https://github.com/cca-bheath/code-style/blob/master/img/scroll-from-source.png)
 
+## Open PhpStorm from link in Windows/Linux
+
+https://github.com/aik099/PhpStormProtocol
+
+Fix for linux:
+https://github.com/sanduhrs/phpstorm-url-handler/issues/8
+
 ## References
 
 * https://murze.be/configuring-phpstorms-code-generation
